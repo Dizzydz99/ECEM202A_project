@@ -1,12 +1,10 @@
 # Abstract
 
-Provide a brief overview of the project objhectives, approach, and results.
+Computing the angles of tilt for a device serves various purposes in the realms of human motion tracking and virtual reality. Conventional approaches involve integrating data from accelerometers, magnetometers, and gyroscopes to fuse sensor information. Nonetheless, gyroscopes are more demanding in terms of power consumption and cost when compared to the aforementioned sensors. In this project, we employ a machine learning approach to attain accurate inclination estimation, leveraging data from accelerometers, magnetometers, and a limited number of gyroscopic samples.
 
 # Team
 
-* Name of team member \#1 
-* Name of team member \#2 (delete this if necessary)
-* Name of team member \#3 (delete this if necessary)
+* Ding Zhao
 
 # Required Submissions
 
