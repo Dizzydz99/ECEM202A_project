@@ -4,6 +4,6 @@ show_downloads: true
 # google_analytics:[Your Google Analytics tracking ID]
 
 # Name of website
-title: Gyro-limited Low Power sensing for Inclination Estimation
+title: ML Assisted Intermittent Gyroscope Utilization for Low-Power Sensing
 logo: /media/orientation.jpg
 description: Project for UCLA ECEM202A/CSM213A (Fall 2023)
