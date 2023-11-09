@@ -5,4 +5,5 @@ show_downloads: true
 
 # Name of website
 title: Gyro-limited Low Power sensing for Inclination Estimation
+logo: /media/orientation.jpg
 description: Project for UCLA ECEM202A/CSM213A (Fall 2023)
