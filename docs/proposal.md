@@ -39,6 +39,9 @@ Key tasks include data collection, neural network design, real-time implementati
 ### 9.a. Papers
 
 [1]Bandhav Veluri, Collin Pernu, Ali Saffari, Joshua Smith, Michael Taylor, and Shyamnath Gollakota. 2023. NeuriCam: Key-Frame Video Super-Resolution and Colorization for IoT Cameras. In Proceedings of the 29th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '23). Association for Computing Machinery, New York, NY, USA, Article 26, 1–17. https://doi.org/10.1145/3570361.3592523
+[2]Zhang, Yifan, William W. Clark, Bryan Tillman, Young Jae Chun, Stephanie Liu, and Sung Kwon Cho. 2023. "A System to Track Stent Location in the Human Body by Fusing Magnetometer and Accelerometer Measurements" Sensors 23, no. 10: 4887. https://doi.org/10.3390/s23104887
+[3]Baptiste Delporte, Laurent Perroton, Thierry Grandpierre, Jacques Trichet. Accelerometer and Magnetometer Based Gyroscope Emulation on Smart Sensor for a Virtual Reality Application. Sensors & Transducers., 2012, 14-1 (Special Issue ISSN 1726-5479), p32-p47. ⟨hal-00826243⟩
+[4]Q. Liu et al., "Gazelle: Energy-Efficient Wearable Analysis for Running," in IEEE Transactions on Mobile Computing, vol. 16, no. 9, pp. 2531-2544, 1 Sept. 2017, doi: 10.1109/TMC.2016.2623304.
 
 ### 9.b. Datasets
 
@@ -46,8 +49,14 @@ No public dataset is used.
 
 ### 9.c. Software
 
-List softwate that you have identified and plan to use. Provide references (with full citation in the References section below).
+* Python: Keras, tensorflow
+* Edge Impulse
+* Arduino IDE
+* Processing
 
 ## 10. References
 
-List references correspondign to citations in your text above. For papers please include full citation and URL. For datasets and software include name and URL.
+[1]Bandhav Veluri, Collin Pernu, Ali Saffari, Joshua Smith, Michael Taylor, and Shyamnath Gollakota. 2023. NeuriCam: Key-Frame Video Super-Resolution and Colorization for IoT Cameras. In Proceedings of the 29th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '23). Association for Computing Machinery, New York, NY, USA, Article 26, 1–17. https://doi.org/10.1145/3570361.3592523
+[2]Zhang, Yifan, William W. Clark, Bryan Tillman, Young Jae Chun, Stephanie Liu, and Sung Kwon Cho. 2023. "A System to Track Stent Location in the Human Body by Fusing Magnetometer and Accelerometer Measurements" Sensors 23, no. 10: 4887. https://doi.org/10.3390/s23104887
+[3]Baptiste Delporte, Laurent Perroton, Thierry Grandpierre, Jacques Trichet. Accelerometer and Magnetometer Based Gyroscope Emulation on Smart Sensor for a Virtual Reality Application. Sensors & Transducers., 2012, 14-1 (Special Issue ISSN 1726-5479), p32-p47. ⟨hal-00826243⟩
+[4]Q. Liu et al., "Gazelle: Energy-Efficient Wearable Analysis for Running," in IEEE Transactions on Mobile Computing, vol. 16, no. 9, pp. 2531-2544, 1 Sept. 2017, doi: 10.1109/TMC.2016.2623304.
