@@ -21,7 +21,7 @@ An Inertial Measurement Unit (IMU) is important for various applications, partic
 
 * State of the Art & Its Limitations
 
-Accelerameters and magnetometers based gyroscope emulation is studied for a long time while all of the algorithms are based on mathematical derivation and physical modeling,which requires the data is highly accurate and noise free, especially for magnetometers. Hard-iron offset elimination is proposed for tilt-compensation but the algorithm is still not robust for accurate inclination estimation.
+Accelerometers and magnetometers based gyroscope emulation is studied for a long time while all of the algorithms are based on mathematical derivation and physical modeling,which requires the data is highly accurate and noise free, especially for magnetometers. Hard-iron offset elimination is proposed for tilt-compensation but the algorithm is still not robust for accurate inclination estimation.
 
 * Novelty & Rationale
 
@@ -51,11 +51,13 @@ A conventional IMU comprises gyroscope, accelerometer and magnetometer, in order
 
 A gyroscope-free IMU that only consists of accelerations sensors is presented in [9] to complete relative body movement only by accelerometers.It intends to first overcome the mentioned disadvantages of gyroscopes and second, to reduce the total system cost by using already existing accelerometers as for example in a car. At least six accelerometers are necessary to completely determine the relative motion of a body. However, this minimum number of accelerometers is only feasible in a certain cube configuration of the sensors. Furthermore, using six sensors only the angular and the transversal acceleration can be detected. The angular velocity has to be computed via an integration step, which leads to drift errors. Authors' approach, using 12 sensors, makes it possible to determine the angular rate directly and also permits a nearly arbitrary placement of the sensors. But, with a gyro-free-IMU it is not possible to directly calculate the sign of the angular movement. To overcome this drawback, an Un- scented Kalman Filter (UKF) is applied to merge the information of the angular acceleration and the angular rate and thus robustly estimate the sign of the body’s rotation.
 
-![acc_only](media/acc_onlly.png)
+![acc_only](media/acc_only.png)
 
-The accuracy of the IMU after calibration is compared to the results using positions and orientations given in the construction plan and to a simulation based on ideal parameters. For the evaluation based on the construction plan, a simple offset adjustment of the sensor signals has been applied, since this is a standard calibration procedure. However, the method is not realistic in real systems because only 3-axis acceleration is obtainable in IMU, while in this paper, 12 accelerameters are used to estimate the pose.
+The accuracy of the IMU after calibration is compared to the results using positions and orientations given in the construction plan and to a simulation based on ideal parameters. For the evaluation based on the construction plan, a simple offset adjustment of the sensor signals has been applied, since this is a standard calibration procedure. However, the method is not realistic in real systems because only 3-axis acceleration is obtainable in IMU, while in this paper, 12 accelerometers are used to estimate the pose.
 
+Another approach is proposed in [3] to use accelerometer and magnetometer to emulate gyroscope's functionality based on physical models. Authors proposed two methods to recontruct the gyro, the first one relies on Tait-Bryan angles and quaternions, the second approach is based on Rotation Matrix. The computation process is shown in the following:
 
+![computation_process_1](media/computation_process_1.png)
 
 # 3. Technical Approach
 
