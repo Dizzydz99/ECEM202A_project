@@ -45,8 +45,12 @@ For skills required for this project, the core skill is to design a neural netwo
 
 In this project, the metrics of success are based on inclination estimation accuracy. The angles of inclination fusing accelerometers, magnerometers and gyroscopes can be treated as groud truth. Estimated inclination can be obtained using machine learning model. We can determine whether an accurate estimation is made based on mean absolute error and the computation time required for the estimation.
 
-
 # 2. Related Work
+
+A conventional IMU comprises gyroscope, accelerometer and magnetometer, in order to get the pose estimation. However, gyroscopes are afflicted with bias drift, shock resistance and durability, also it is the most power consuming and expensive components among all the IMU sensors. Multiple methods are proposed to use accelerometers and magnetometers to mimic the gyroscope's functionality.
+
+A gyroscope-free IMU that only consists of accelerations sensors is presented in [9] to complete relative body movement only by accelerometers.It intends to first overcome the mentioned disadvantages of gyroscopes and second, to reduce the total system cost by using already existing accelerometers as for example in a car. At least six accelerometers are necessary to completely determine the relative motion of a body. However, this minimum number of accelerometers is only feasible in a certain cube configuration of the sensors. Furthermore, using six sensors only the angular and the transversal acceleration can be detected. The angular velocity has to be computed via an integration step, which leads to drift errors. Authors' approach, using 12 sensors, makes it possible to determine the angular rate directly and also permits a nearly arbitrary placement of the sensors. But, with a gyro-free-IMU it is not possible to directly calculate the sign of the angular movement. To overcome this drawback, an Un- scented Kalman Filter (UKF) is applied to merge the information of the angular acceleration and the angular rate and thus robustly estimate the sign of the body’s rotation.
+
 
 # 3. Technical Approach
 
@@ -55,3 +59,22 @@ In this project, the metrics of success are based on inclination estimation accu
 # 5. Discussion and Conclusions
 
 # 6. References
+[1]Bandhav Veluri, Collin Pernu, Ali Saffari, Joshua Smith, Michael Taylor, and Shyamnath Gollakota. 2023. NeuriCam: Key-Frame Video Super-Resolution and Colorization for IoT Cameras. In Proceedings of the 29th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '23). Association for Computing Machinery, New York, NY, USA, Article 26, 1–17. https://doi.org/10.1145/3570361.3592523
+
+[2]Zhang, Yifan, William W. Clark, Bryan Tillman, Young Jae Chun, Stephanie Liu, and Sung Kwon Cho. 2023. "A System to Track Stent Location in the Human Body by Fusing Magnetometer and Accelerometer Measurements" Sensors 23, no. 10: 4887. https://doi.org/10.3390/s23104887
+
+[3]Baptiste Delporte, Laurent Perroton, Thierry Grandpierre, Jacques Trichet. Accelerometer and Magnetometer Based Gyroscope Emulation on Smart Sensor for a Virtual Reality Application. Sensors & Transducers., 2012, 14-1 (Special Issue ISSN 1726-5479), p32-p47. ⟨hal-00826243⟩
+
+[4]Q. Liu et al., "Gazelle: Energy-Efficient Wearable Analysis for Running," in IEEE Transactions on Mobile Computing, vol. 16, no. 9, pp. 2531-2544, 1 Sept. 2017, doi: 10.1109/TMC.2016.2623304.
+
+[5]Ludwig, Simone A., and Antonio R. Jiménez. "Optimization of gyroscope and accelerometer/magnetometer portion of basic attitude and heading reference system." 2018 IEEE International Symposium on Inertial Sensors and Systems (INERTIAL). IEEE, 2018.
+
+[6]Wu, Yuanxin, and Ling Pei. "Gyroscope calibration via magnetometer." IEEE Sensors Journal 17.16 (2017): 5269-5275.
+
+[7]Yu, Hongnian, Shuang Cang, and Yan Wang. "A review of sensor selection, sensor devices and sensor deployment for wearable sensor-based human activity recognition systems." 2016 10th international conference on software, knowledge, information management & applications (skima). IEEE, 2016.
+
+[8]Liu, T., G. R. Zhao, and S. Pan. "New calculating method of angular velocity in gyroscope-free strapdown inertial navigation systems." Systems Engineering and Electronics 32.1 (2010): 162-165.
+
+[9]Schopp, P., et al. "Sensor fusion algorithm and calibration for a gyroscope-free IMU." Procedia Chemistry 1.1 (2009): 1323-1326.
+
+[10]Wang, C., et al. "Hybrid algorithm for angular velocity calculation in a gyroscope-free strapdown inertial navigation system." Journal of Chinese Inertial Technology 18.4 (2010): 401-404.
