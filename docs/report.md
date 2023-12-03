@@ -67,6 +67,10 @@ The experimental results of the angular velocity computed with their first metho
 
 ![physical_model_results](media/physical_model_results.png)
 
+Machine learning approach is widely used, especially in computer vision to recontruct high quality images from low resulution pictures. In [1], they heavily duty cycle the high power mode of the camera to output an images only once every second and proposed a machine learning model to reconstrct the video with grey-scale, low resolution camera. To achieve this, they introduced an attention feature filter mechanism that assigns different weights to different features, based on the correlation between the feature map and the contents of the input frame at each spatial location. The architecture of the machine learning model is shown as follows:
+
+![NeuriCam](media/NeuriCam.png)
+
 # 3. Technical Approach
 
 # 4. Evaluation and Results
