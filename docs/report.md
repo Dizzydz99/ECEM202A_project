@@ -55,9 +55,17 @@ A gyroscope-free IMU that only consists of accelerations sensors is presented in
 
 The accuracy of the IMU after calibration is compared to the results using positions and orientations given in the construction plan and to a simulation based on ideal parameters. For the evaluation based on the construction plan, a simple offset adjustment of the sensor signals has been applied, since this is a standard calibration procedure. However, the method is not realistic in real systems because only 3-axis acceleration is obtainable in IMU, while in this paper, 12 accelerometers are used to estimate the pose.
 
-Another approach is proposed in [3] to use accelerometer and magnetometer to emulate gyroscope's functionality based on physical models. Authors proposed two methods to recontruct the gyro, the first one relies on Tait-Bryan angles and quaternions, the second approach is based on Rotation Matrix. The computation process is shown in the following:
+Another approach is proposed in [3] to use accelerometer and magnetometer to emulate gyroscope's functionality based on physical models. Authors proposed two methods to recontruct the gyro, the first one relies on Tait-Bryan angles and quaternions, the second approach is based on Rotation Matrix. The computation process of the first approach is shown in the following:
 
 ![computation_process_1](media/computation_process_1.png)
+
+In this approach, the angles of inclination of the device and the angular velocity are computed from the accelerometer and the magnetometer measurementss using Tait-Bryan angles and quaternions. It has low computation cost, but the major disadvantage of this method is that it has 8 singularities to check and it requre the explicit computation of the angles. The authors proposed another algorithm based on Rotation Matrix and quaternions to reduce the number sigularities and address the problem of  explicit computation of angles. The computation process of this approach is shown in the following:
+
+![computation_process_2](media/computation_process_2.png)
+
+The experimental results of the angular velocity computed with their first method is compared to the measurements from a real gyroscope.The results are shown as follows. Also a basic virtual reality application is developed to test the emulation result.
+
+![physical_model_results](media/physical_model_results.png)
 
 # 3. Technical Approach
 
