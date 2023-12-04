@@ -87,9 +87,11 @@ After the calibrate the sensors, the training data can be used for model trainin
 
 (3) Arduino Nano 33 Deployment:
 
-After building and training the Tensorflow model, the pretrained model is converted to TensorFlow Lite and then encoded the model in an Arduino header file.
+After building and training the Tensorflow model, the pretrained model is converted to TensorFlow Lite and then encoded the model in an Arduino header file. The model is then deployed on Arduino Nano 33 and take the current acceleration and current magnetometer readings as well as the previous gyro estimation. The output is the estimation of current gyro. The output data can be use in visualization and for further analysis.
 
 (4) Visualization:
+
+The inclination angles using sensor readings and the output of the neural network can be used in Processing for visualization, to illustrate the performance of the output data.
 
 
 
