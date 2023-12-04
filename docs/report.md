@@ -83,9 +83,11 @@ The training dataset is collected while ensuring the IMU is randomly moving and 
 
 (2) Model Design and Training:
 
+After the calibrate the sensors, the training data can be used for model training. The model is trained using Tensorflow and will deploy to Arduino Nano 33 BLE Rev2. The input data consists 3-axes current accelerometer readings, 3-axes current magnetometer readings and 3-axes previous gyroscope readings(real reading or estimated data). The output is the estimated current 3-axes current gyroscope estimation. The input previous gyroscope data can be treated as starting point, and the current accelerometer reading and magnetometer reading is regarded as the controller of the system. The input data is fed into each of the three fully connected neural networks based on the different sensor types and passed together through the same fully connected neural network, which then outpus the estimated gyroscope values. The model is trained on Nvidia RTX 3070Ti. 
 
 (3) Arduino Nano 33 Deployment:
 
+After building and training the Tensorflow model, the pretrained model is converted to TensorFlow Lite and then encoded the model in an Arduino header file.
 
 (4) Visualization:
 
