@@ -73,6 +73,24 @@ Machine learning approach is widely used, especially in computer vision to recon
 
 # 3. Technical Approach
 
+The technical approach to this project can be mainly divided into 4 steps: Data collection and Calibration, Model design and training, Arduino Nano 33 deployment and Visualization.
+
+(1) Data Collection and Calibration：
+
+The data collection part contains 2 seperate dataset, including one training dataset and one calibration dataset. The calibration dataset is collected while ensuring the IMU is in a static and stable position, which means no movement or vibration. I recorded the sensor readings from accelerometers, gyroscopes and magnetometers in all three axes while the IMU is stationary. The calibration data will be used to determine the sensor biases to eliminate the drifting of the accelerometer and gyroscope and the hard-iron effect of the magnetometer. In total, 15712 data samples are collected for sensor calibration.
+
+The training dataset is collected while ensuring the IMU is randomly moving and rotating. The sensor readings from the accelerometers, gyroscopes and magnetometers as well as the inclination angle(pitch, roll, yaw) estimated using kalman filter is recorded for the training process. In total, 15784 data samples are collected for sensor calibration.
+
+(2) Model Design and Training:
+
+
+(3) Arduino Nano 33 Deployment:
+
+
+(4) Visualization:
+
+
+
 # 4. Evaluation and Results
 
 # 5. Discussion and Conclusions
