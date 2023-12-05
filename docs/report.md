@@ -130,6 +130,8 @@ The End Point
 
 # 5. Discussion and Conclusions
 
+Accelerometers and magnetometers have the ability to reproduce gyroscopes due to the erdundant degrees of freedom in the IMU. Physical model based methods are proposed to solve the problem. In this project, I proposed an approach using machine learning and low-sample-rate gyro value to emulate virtual gyroscope. The experimental results showed that the proposed method can approximately recontruct the gyroscope, given a reasonable step value. Also, more complicated model can be used to emulate the output data and the time-dependency of the input data can be better ultilized. Another interesting problem that is worth exploring is that the computational complexity for computing the virtual gyro.
+
 # 6. References
 [1]Bandhav Veluri, Collin Pernu, Ali Saffari, Joshua Smith, Michael Taylor, and Shyamnath Gollakota. 2023. NeuriCam: Key-Frame Video Super-Resolution and Colorization for IoT Cameras. In Proceedings of the 29th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '23). Association for Computing Machinery, New York, NY, USA, Article 26, 1–17. https://doi.org/10.1145/3570361.3592523
 
