@@ -102,6 +102,22 @@ In order to get accurate accelerometer and magnetometer readings, calibration is
 
 ![Calibration](media/calibration.png)
 
+According to the calibration result, the acceleration offsets for three axes are 0.008g, -0.026g and 0.005g,respectively. The gyroscope offsets for three axes are -0.025dps,-0.1138dps and 0.0397dps, respectively. The magnetometer calibration should be done when moving the hardware to another place because it highly depends on the environment.
+
+(2) Model Analysis:
+
+The model performance is evaluated given the previous gyro reading or estimation, current accelerometer and magnetometer readings. One step result is shown in the following. One step estimation can reduce the gyro usage to 50%, and can accuratelt track the real gyro readings.
+
+![gyro_emulation](media/gyro_emulation.png)
+
+However, when I increase the number of steps for the model to estimate, the estimation error will quickly accumulate and affect the estimation accuracy. The CDF figure and the box figure is shown in the following:
+
+![gyro_cdf](media/gyro_cdf.png)
+
+![gyro_box](media/gyro_box.png)
+
+The figure clearly illustrates that the estimation error is significantly greater along the Y-axes compared to the X-axes and Z-axes. In one-step prediction for the X and Z-axes, the angular velocity estimation error is approximately 15 degrees per second (dps), and with an increasing number of steps, it converges to around 40 dps. In contrast, for one-step prediction along the Y-axes, the angular velocity estimation error is approximately 19 dps, and as the number of steps increases, it converges to around 75 dps.
+
 
 # 5. Discussion and Conclusions
 
