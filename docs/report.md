@@ -130,9 +130,6 @@ The End Point
 
 ![visualization_end](media/visualization_end.png)
 
-
-
-
 # 5. Discussion and Conclusions
 
 # 6. References
