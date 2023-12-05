@@ -94,8 +94,14 @@ After building and training the Tensorflow model, the pretrained model is conver
 The inclination angles using sensor readings and the output of the neural network can be used in Processing for visualization, to illustrate the performance of the output data.
 
 
-
 # 4. Evaluation and Results
+
+(1) Calibration Result:
+
+In order to get accurate accelerometer and magnetometer readings, calibration is required to eliminate the drifting and the hard-iron effect. The calibration result is shown as follows:
+
+![Calibration](media/calibration.png)
+
 
 # 5. Discussion and Conclusions
 
