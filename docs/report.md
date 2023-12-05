@@ -118,6 +118,20 @@ However, when I increase the number of steps for the model to estimate, the esti
 
 The figure clearly illustrates that the estimation error is significantly greater along the Y-axes compared to the X-axes and Z-axes. In one-step prediction for the X and Z-axes, the angular velocity estimation error is approximately 15 degrees per second (dps), and with an increasing number of steps, it converges to around 40 dps. In contrast, for one-step prediction along the Y-axes, the angular velocity estimation error is approximately 19 dps, and as the number of steps increases, it converges to around 75 dps.
 
+(3) Hardware deployment and Visualization:
+
+In this part the performance of the virtual gyro is evaluated on Arduino Nano 33BLE Rev2 board and Processing is used for visualization. The visualization results at the initial point and the end point are shown as follows and it used 5-step emulation to estimate the gyro-scope readings. The figure on the left-hand side represents the real inclination angles calculated from the filter and the right-hand side figure represents the inlication angles based on the virtual gyro emulation.
+
+The Initial Point
+
+![visualization_initial](media/visualization_initial.png)
+
+The End Point
+
+![visualization_end](media/visualization_end.png)
+
+
+
 
 # 5. Discussion and Conclusions
 
