@@ -13,8 +13,6 @@ Computing the angles of tilt for a device serves various purposes in the realms 
 
 # 1. Introduction
 
-This section should cover the following items:
-
 * Motivation & Objective
 
 An Inertial Measurement Unit (IMU) is important for various applications, particulary in the fields of robotics, virtual reality and wearable technology. IMUs play a crucial role in providing valuable information about motion sensing. However, gyroscopes are more expensive and power hungry compared to accelerometers and magnetometers. In IoT, power consumption is a critical concern and the project aims to reduce power consumption by using alternative sensors to mimic a gyro's functionality to make IoT devices more energy-efficient. Machine learning method is used for accurate inclination estimation based on accelerometers and magnetometers and limited number of gyro samples.
@@ -96,7 +94,7 @@ The inclination angles using sensor readings and the output of the neural networ
 
 # 4. Evaluation and Results
 
-(1) Calibration Result:
+(1) Calibration Results:
 
 In order to get accurate accelerometer and magnetometer readings, calibration is required to eliminate the drifting and the hard-iron effect. The calibration result is shown as follows:
 
