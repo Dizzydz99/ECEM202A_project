@@ -23,7 +23,7 @@ Accelerometers and magnetometers based gyroscope emulation is studied for a long
 
 * Novelty & Rationale
 
-In this undertaking, I introduced a machine learning approach aimed at estimating inclination angles by utilizing accelerometers, magnetometers, and a limited set of gyroscope data. It has been demonstrated that accelerometers and magnetometers possess the capability to reconstruct gyroscope information, and a small set of gyroscope samples contributes to the overall robustness of the emulation process. When compared to model-based techniques, machine learning exhibits enhanced accuracy and resilience to noise. Similar works have done in other areas, such as computer vision, using key frames to recontruct higher resolution pictures give low resolution input.
+In this undertaking, I introduced a machine learning approach aimed at estimating inclination angles by utilizing accelerometers, magnetometers, and a limited set of gyroscope data. It has been demonstrated that accelerometers and magnetometers possess the capability to reconstruct gyroscope information, and a small set of gyroscope samples contributes to the overall robustness of the emulation process. When compared to model-based techniques, machine learning exhibits enhanced accuracy and resilience to noise. Similar works have done in other areas, such as computer vision, using key frames to reconstruct higher resolution pictures give low resolution input.
 
 * Potential Impact
 
@@ -53,7 +53,7 @@ A gyroscope-free IMU that only consists of accelerations sensors is presented in
 
 The accuracy of the IMU after calibration is compared to the results using positions and orientations given in the construction plan and to a simulation based on ideal parameters. For the evaluation based on the construction plan, a simple offset adjustment of the sensor signals has been applied, since this is a standard calibration procedure. However, the method is not realistic in real systems because only 3-axis acceleration is obtainable in IMU, while in this paper, 12 accelerometers are used to estimate the pose.
 
-Another approach is proposed in [3] to use accelerometer and magnetometer to emulate gyroscope's functionality based on physical models. Authors proposed two methods to recontruct the gyro, the first one relies on Tait-Bryan angles and quaternions, the second approach is based on Rotation Matrix. The computation process of the first approach is shown in the following:
+Another approach is proposed in [3] to use accelerometer and magnetometer to emulate gyroscope's functionality based on physical models. Authors proposed two methods to reconstruct the gyro, the first one relies on Tait-Bryan angles and quaternions, the second approach is based on Rotation Matrix. The computation process of the first approach is shown in the following:
 
 ![computation_process_1](media/computation_process_1.png)
 
@@ -65,7 +65,7 @@ The experimental results of the angular velocity computed with their first metho
 
 ![physical_model_results](media/physical_model_results.png)
 
-Machine learning approach is widely used, especially in computer vision to recontruct high quality images from low resulution pictures. In [1], they heavily duty cycle the high power mode of the camera to output an images only once every second and proposed a machine learning model to reconstrct the video with grey-scale, low resolution camera. To achieve this, they introduced an attention feature filter mechanism that assigns different weights to different features, based on the correlation between the feature map and the contents of the input frame at each spatial location. The architecture of the machine learning model is shown as follows:
+Machine learning approach is widely used, especially in computer vision to reconstruct high quality images from low resulution pictures. In [1], they heavily duty cycle the high power mode of the camera to output an images only once every second and proposed a machine learning model to reconstrct the video with grey-scale, low resolution camera. To achieve this, they introduced an attention feature filter mechanism that assigns different weights to different features, based on the correlation between the feature map and the contents of the input frame at each spatial location. The architecture of the machine learning model is shown as follows:
 
 ![NeuriCam](media/NeuriCam.png)
 
@@ -130,7 +130,7 @@ The End Point
 
 # 5. Discussion and Conclusions
 
-Accelerometers and magnetometers have the ability to reproduce gyroscopes due to the erdundant degrees of freedom in the IMU. Physical model based methods are proposed to solve the problem. In this project, I proposed an approach using machine learning and low-sample-rate gyro value to emulate virtual gyroscope. The experimental results showed that the proposed method can approximately recontruct the gyroscope, given a reasonable step value. Also, more complicated model can be used to emulate the output data and the time-dependency of the input data can be better ultilized. Another interesting problem that is worth exploring is that the computational complexity for computing the virtual gyro.
+Accelerometers and magnetometers have the ability to reproduce gyroscopes due to the erdundant degrees of freedom in the IMU. Physical model based methods are proposed to solve the problem. In this project, I proposed an approach using machine learning and low-sample-rate gyro value to emulate virtual gyroscope. The experimental results showed that the proposed method can approximately reconstruct the gyroscope, given a reasonable step value. Also, more complicated model can be used to emulate the output data and the time-dependency of the input data can be better ultilized. Another interesting problem that is worth exploring is that the computational complexity for computing the virtual gyro.
 
 # 6. References
 [1]Bandhav Veluri, Collin Pernu, Ali Saffari, Joshua Smith, Michael Taylor, and Shyamnath Gollakota. 2023. NeuriCam: Key-Frame Video Super-Resolution and Colorization for IoT Cameras. In Proceedings of the 29th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '23). Association for Computing Machinery, New York, NY, USA, Article 26, 1–17. https://doi.org/10.1145/3570361.3592523
