@@ -12,3 +12,4 @@ Computing the angles of tilt for a device serves various purposes in the realms 
 * [Midterm Checkpoint Presentation Slides](media/midterm_check.pdf)
 * [Final Presentation Slides](media/Final_Presentation.pdf)
 * [Final Report](report)
+* [Demo](media/202A_demo.mov)
