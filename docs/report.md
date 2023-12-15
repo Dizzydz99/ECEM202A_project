@@ -15,11 +15,11 @@ Computing the angles of tilt for a device serves various purposes in the realms 
 
 * Motivation & Objective
 
-An Inertial Measurement Unit (IMU) is important for various applications, particulary in the fields of robotics, virtual reality and wearable technology. IMUs play a crucial role in providing valuable information about motion sensing. However, gyroscopes are more expensive and power hungry compared to accelerometers and magnetometers. In IoT, power consumption is a critical concern and the project aims to reduce power consumption by using alternative sensors to mimic a gyro's functionality to make IoT devices more energy-efficient. Machine learning method is used for accurate inclination estimation based on accelerometers and magnetometers and limited number of gyro samples.
+An Inertial Measurement Unit (IMU) is important for various applications, particularly in the fields of robotics, virtual reality and wearable technology. IMUs play a crucial role in providing valuable information about motion sensing. However, gyroscopes are more expensive and power hungry compared to accelerometers and magnetometers. In IoT, power consumption is a critical concern, and the project aims to reduce power consumption by using alternative sensors to mimic a gyro's functionality to make IoT devices more energy-efficient. Machine learning method is used for accurate inclination estimation based on accelerometers and magnetometers and limited number of gyro samples.
 
 * State of the Art & Its Limitations
 
-Accelerometers and magnetometers based gyroscope emulation is studied for a long time while all of the algorithms are based on mathematical derivation and physical modeling,which requires the data is highly accurate and noise free, especially for magnetometers. Hard-iron offset elimination is proposed for tilt-compensation but the algorithm is still not robust for accurate inclination estimation.
+Accelerometers and magnetometers based gyroscope emulation is studied for a long time while all of the algorithms are based on mathematical derivation and physical modeling,which requires the data is highly accurate and noise free, especially for magnetometers. Hard-iron offset elimination is proposed for tilt-compensation, but the algorithm is still not robust for accurate inclination estimation.
 
 * Novelty & Rationale
 
@@ -27,21 +27,21 @@ In this undertaking, I introduced a machine learning approach aimed at estimatin
 
 * Potential Impact
 
-For practical situations, this project offers a sulution to achive highly-accurate inclination estimation with low power consumption due to limited gyro's samples. It can be used in motion sensing, robotics, virtual reality and wearale devices and extend the life of IoT devices.
+For practical situations, this project offers a sulution to achieve highly-accurate inclination estimation with low power consumption due to limited gyro's samples. It can be used in motion sensing, robotics, virtual reality and wearable devices and extend the life of IoT devices.
 
 * Challenges
 
-Data collection is really important in this project. There is no suitable dataset online to train the machine learning model to reconstruct gyroscopes. I need to collect the data using Arduino Nano 33 Sense Rev2. The data collected will be noisy and suffer from drift and the environment, which means calibration is required and the quality of the calibration directly inference the traning result. Another challenge is the machine learning model design and the computation time is cruicial in a real-time system for inclination estimation. The machine learning model should be carefully design to make sure to find the balance between the estimation accuracy and the computation time.
+Data collection is really important in this project. There is no suitable dataset online to train the machine learning model to reconstruct gyroscopes. I need to collect the data using Arduino Nano 33 Sense Rev2. The data collected will be noisy and suffer from drift and the environment, which means calibration is required and the quality of the calibration directly inference the training result. Another challenge is the machine learning model design and the computation time is crucial in a real-time system for inclination estimation. The machine learning model should be carefully design to make sure to find the balance between the estimation accuracy and the computation time.
 
 * Requirements for Success
 
-In order to perform the project, a reliable data set is required for the training phase due to there is no suitable public data set online. I have to collect the data using Arduino Nano 33 Sense Rev2 after clibration. Also a great understand of physical model is required to better design the neural network.
+In order to perform the project, a reliable data set is required for the training phase due to there is no suitable public data set online. I have to collect the data using Arduino Nano 33 Sense Rev2 after calibration. Also a great understand of physical model is required to better design the neural network.
 
-For skills required for this project, the core skill is to design a neural network that can achieve accurate inclination estimation with low computational complexity. Also implementing the machine learning model using Arduino Nano 33 Sense Rev2 and run the model in real-time is required.
+For skills required for this project, the core skill is to design a neural network that can achieve accurate inclination estimation with low computational complexity. Also, implementing the machine learning model using Arduino Nano 33 Sense Rev2 and run the model in real-time is required.
 
 * Metrics of Success
 
-In this project, the metrics of success are based on inclination estimation accuracy. The angles of inclination fusing accelerometers, magnerometers and gyroscopes can be treated as groud truth. Estimated inclination can be obtained using machine learning model. We can determine whether an accurate estimation is made based on mean absolute error and the computation time required for the estimation.
+In this project, the metrics of success are based on inclination estimation accuracy. The angles of inclination fusing accelerometers, magnetometers and gyroscopes can be treated as ground truth. Estimated inclination can be obtained using machine learning model. We can determine whether an accurate estimation is made based on mean absolute error and the computation time required for the estimation.
 
 # 2. Related Work
 
@@ -57,7 +57,7 @@ Another approach is proposed in [3] to use accelerometer and magnetometer to emu
 
 ![computation_process_1](media/computation_process_1.png)
 
-In this approach, the angles of inclination of the device and the angular velocity are computed from the accelerometer and the magnetometer measurementss using Tait-Bryan angles and quaternions. It has low computation cost, but the major disadvantage of this method is that it has 8 singularities to check and it require the explicit computation of the angles. The authors proposed another algorithm based on Rotation Matrix and quaternions to reduce the number sigularities and address the problem of  explicit computation of angles. The computation process of this approach is shown in the following:
+In this approach, the angles of inclination of the device and the angular velocity are computed from the accelerometer and the magnetometer measurements using Tait-Bryan angles and quaternions. It has low computation cost, but the major disadvantage of this method is that it has 8 singularities to check and it require the explicit computation of the angles. The authors proposed another algorithm based on Rotation Matrix and quaternions to reduce the number singularities and address the problem of  explicit computation of angles. The computation process of this approach is shown in the following:
 
 ![computation_process_2](media/computation_process_2.png)
 
@@ -65,7 +65,7 @@ The experimental results of the angular velocity computed with their first metho
 
 ![physical_model_results](media/physical_model_results.png)
 
-Machine learning approach is widely used, especially in computer vision to reconstruct high quality images from low resolution pictures. In [1], they heavily duty cycle the high power mode of the camera to output an images only once every second and proposed a machine learning model to reconstrct the video with grey-scale, low resolution camera. To achieve this, they introduced an attention feature filter mechanism that assigns different weights to different features, based on the correlation between the feature map and the contents of the input frame at each spatial location. The architecture of the machine learning model is shown as follows:
+Machine learning approach is widely used, especially in computer vision to reconstruct high quality images from low resolution pictures. In [1], they heavily duty cycle the high power mode of the camera to output an images only once every second and proposed a machine learning model to reconstruct the video with grey-scale, low resolution camera. To achieve this, they introduced an attention feature filter mechanism that assigns different weights to different features, based on the correlation between the feature map and the contents of the input frame at each spatial location. The architecture of the machine learning model is shown as follows:
 
 ![NeuriCam](media/NeuriCam.png)
 
@@ -104,7 +104,7 @@ According to the calibration result, the acceleration offsets for three axes are
 
 (2) Model Analysis:
 
-The model performance is evaluated given the previous gyro reading or estimation, current accelerometer and magnetometer readings. One step result is shown in the following. One step estimation can reduce the gyro usage to 50%, and can accuratelt track the real gyro readings.
+The model performance is evaluated given the previous gyro reading or estimation, current accelerometer and magnetometer readings. One step result is shown in the following. One step estimation can reduce the gyro usage to 50%, and can accurately track the real gyro readings.
 
 ![gyro_emulation](media/gyro_emulation.png)
 
@@ -118,7 +118,7 @@ The figure clearly illustrates that the estimation error is significantly greate
 
 (3) Hardware deployment and Visualization:
 
-In this part the performance of the virtual gyro is evaluated on Arduino Nano 33BLE Rev2 board and Processing is used for visualization. The visualization results at the initial point and the end point are shown as follows and it used 5-step emulation to estimate the gyro-scope readings. The figure on the left-hand side represents the real inclination angles calculated from the filter and the right-hand side figure represents the inlication angles based on the virtual gyro emulation.
+In this part the performance of the virtual gyro is evaluated on Arduino Nano 33BLE Rev2 board and Processing is used for visualization. The visualization results at the initial point and the end point are shown as follows and it used 5-step emulation to estimate the gyro-scope readings. The figure on the left-hand side represents the real inclination angles calculated from the filter and the right-hand side figure represents the inclication angles based on the virtual gyro emulation.
 
 The Initial Point
 
