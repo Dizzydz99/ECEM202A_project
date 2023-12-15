@@ -57,7 +57,7 @@ Another approach is proposed in [3] to use accelerometer and magnetometer to emu
 
 ![computation_process_1](media/computation_process_1.png)
 
-In this approach, the angles of inclination of the device and the angular velocity are computed from the accelerometer and the magnetometer measurementss using Tait-Bryan angles and quaternions. It has low computation cost, but the major disadvantage of this method is that it has 8 singularities to check and it requre the explicit computation of the angles. The authors proposed another algorithm based on Rotation Matrix and quaternions to reduce the number sigularities and address the problem of  explicit computation of angles. The computation process of this approach is shown in the following:
+In this approach, the angles of inclination of the device and the angular velocity are computed from the accelerometer and the magnetometer measurementss using Tait-Bryan angles and quaternions. It has low computation cost, but the major disadvantage of this method is that it has 8 singularities to check and it require the explicit computation of the angles. The authors proposed another algorithm based on Rotation Matrix and quaternions to reduce the number sigularities and address the problem of  explicit computation of angles. The computation process of this approach is shown in the following:
 
 ![computation_process_2](media/computation_process_2.png)
 
@@ -65,7 +65,7 @@ The experimental results of the angular velocity computed with their first metho
 
 ![physical_model_results](media/physical_model_results.png)
 
-Machine learning approach is widely used, especially in computer vision to reconstruct high quality images from low resulution pictures. In [1], they heavily duty cycle the high power mode of the camera to output an images only once every second and proposed a machine learning model to reconstrct the video with grey-scale, low resolution camera. To achieve this, they introduced an attention feature filter mechanism that assigns different weights to different features, based on the correlation between the feature map and the contents of the input frame at each spatial location. The architecture of the machine learning model is shown as follows:
+Machine learning approach is widely used, especially in computer vision to reconstruct high quality images from low resolution pictures. In [1], they heavily duty cycle the high power mode of the camera to output an images only once every second and proposed a machine learning model to reconstrct the video with grey-scale, low resolution camera. To achieve this, they introduced an attention feature filter mechanism that assigns different weights to different features, based on the correlation between the feature map and the contents of the input frame at each spatial location. The architecture of the machine learning model is shown as follows:
 
 ![NeuriCam](media/NeuriCam.png)
 
@@ -75,7 +75,7 @@ The technical approach to this project can be mainly divided into 4 steps: Data 
 
 (1) Data Collection and Calibration：
 
-The data collection part contains 2 seperate dataset, including one training dataset and one calibration dataset. The calibration dataset is collected while ensuring the IMU is in a static and stable position, which means no movement or vibration. I recorded the sensor readings from accelerometers, gyroscopes and magnetometers in all three axes while the IMU is stationary. The calibration data will be used to determine the sensor biases to eliminate the drifting of the accelerometer and gyroscope and the hard-iron effect of the magnetometer. In total, 15712 data samples are collected for sensor calibration.
+The data collection part contains 2 separate dataset, including one training dataset and one calibration dataset. The calibration dataset is collected while ensuring the IMU is in a static and stable position, which means no movement or vibration. I recorded the sensor readings from accelerometers, gyroscopes and magnetometers in all three axes while the IMU is stationary. The calibration data will be used to determine the sensor biases to eliminate the drifting of the accelerometer and gyroscope and the hard-iron effect of the magnetometer. In total, 15712 data samples are collected for sensor calibration.
 
 The training dataset is collected while ensuring the IMU is randomly moving and rotating. The sensor readings from the accelerometers, gyroscopes and magnetometers as well as the inclination angle(pitch, roll, yaw) estimated using kalman filter is recorded for the training process. In total, 15784 data samples are collected for sensor calibration.
 
