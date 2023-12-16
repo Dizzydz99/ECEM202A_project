@@ -14,8 +14,8 @@ Computing the angles of tilt for a device serves various purposes in the realms 
 You may add additional folders as necessary.
 
 ## Links:  
-[Demo Video](media/202A_demo.mov)
+[Demo Video](docs/media/202A_demo.mov)
 
-[Final Presentation Slides](media/Final_Presentation.pdf)
+[Final Presentation Slides](docs/media/Final_Presentation.pdf)
 
 [Website](https://dizzydz99.github.io/ECEM202A_project/)
