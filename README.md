@@ -11,8 +11,6 @@ Computing the angles of tilt for a device serves various purposes in the realms 
 * [software](software) for files used for model training, hardware deployment and visualization.
 * [data](data) for the collected dataset, Tensorflow lite model and header file.
 
-You may add additional folders as necessary.
-
 ## Links:  
 [Demo Video](docs/media/202A_demo.mov)
 
